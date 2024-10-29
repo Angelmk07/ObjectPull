@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  LiveTimeValue: 2.5
+  LiveTimeValue: 4

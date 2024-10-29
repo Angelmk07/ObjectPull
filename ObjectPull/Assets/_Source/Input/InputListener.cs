@@ -2,24 +2,26 @@ using PlayerSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class InputListener : MonoBehaviour
+namespace InputSystem 
 {
-    private PlayerShoot _playerShoot;
-    public void Construct(PlayerShoot _playerShoot)
+    public class InputListener : MonoBehaviour
     {
-        this._playerShoot = _playerShoot;
-    }
-    private void Update()
-    {
-        ListenShoot();
-    }
-    private void ListenShoot()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
+        private PlayerShoot _playerShoot;
+        public void Construct(PlayerShoot _playerShoot)
         {
-            _playerShoot.Shoot();
+            this._playerShoot = _playerShoot;
         }
-        
+        private void Update()
+        {
+            ListenShoot();
+        }
+        private void ListenShoot()
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                _playerShoot.Shoot();
+            }
+
+        }
     }
 }

@@ -16,10 +16,10 @@ namespace PlayerSystem
             Debug.Log("Shoot");
             if(BulletPool.TryGetItem( out Bullet bullet))
             {
+                Debug.Log(bullet);
                 bullet.transform.position = firepoint.position;
                 bullet.transform.rotation = firepoint.localRotation;
                 bullet.gameObject.SetActive(true);
-                Debug.Log(bullet.gameObject.active);
             }
         }
     }

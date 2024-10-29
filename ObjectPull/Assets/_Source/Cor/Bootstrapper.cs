@@ -1,3 +1,4 @@
+using InputSystem;
 using PlayerSystem;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,11 +10,12 @@ namespace Core
         [SerializeField] private Bullet bulletpref;
         [SerializeField] private PlayerShoot playerShoot;
         [SerializeField] private InputListener inputListener;
+        [SerializeField] private int StartValBullets;
         private BulletPool _bulletPool;
         void Start()
         {
             inputListener.Construct(playerShoot);
-            _bulletPool = new(bulletpref);
+            _bulletPool = new(bulletpref,StartValBullets);
             playerShoot.Construct(_bulletPool);
         }
         public void End()

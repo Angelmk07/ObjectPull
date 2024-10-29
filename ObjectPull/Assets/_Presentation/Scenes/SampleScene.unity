@@ -535,6 +535,7 @@ MonoBehaviour:
   bulletpref: {fileID: 8380643885296555777, guid: 6e5e18c9deef59a48bab7d35b2bd19e0, type: 3}
   playerShoot: {fileID: 976938935}
   inputListener: {fileID: 435117345}
+  StartValBullets: 10
 --- !u!4 &1561282114
 Transform:
   m_ObjectHideFlags: 0
